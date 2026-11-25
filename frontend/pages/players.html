@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players | Football Intelligence</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/players.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">FOOTBALL INTEL.</div>
+
+        <nav>
+            <a href="../index.html">Overview</a>
+            <a href="players.html" class="active">Players</a>
+            <a href="#">Teams</a>
+            <a href="#">Compare</a>
+            <a href="#">Scouting</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <span>FOOTBALL DATA PLATFORM</span>
+            <span>Season 2025/26</span>
+        </header>
+
+        <section class="players-heading">
+            <p class="eyebrow">PLAYER DATABASE</p>
+            <h1>Player Explorer</h1>
+            <p>Explore players and discover the numbers behind their game.</p>
+        </section>
+
+        <section class="player-controls">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search players..."
+            >
+
+            <select id="positionFilter">
+                <option value="all">All positions</option>
+                <option value="Forward">Forward</option>
+                <option value="Midfielder">Midfielder</option>
+                <option value="Defender">Defender</option>
+                <option value="Goalkeeper">Goalkeeper</option>
+            </select>
+
+            <select id="leagueFilter">
+                <option value="all">All leagues</option>
+                <option value="Premier League">Premier League</option>
+                <option value="La Liga">La Liga</option>
+            </select>
+        </section>
+
+        <p class="sample-note">Sample dataset · For interface testing only</p>
+
+        <section class="player-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>PLAYER</th>
+                        <th>POSITION</th>
+                        <th>LEAGUE</th>
+                    </tr>
+                </thead>
+                <tbody id="playerList"></tbody>
+            </table>
+
+            <p id="emptyMessage" hidden>No players found.</p>
+        </section>
+    </main>
+
+    <script src="../js/players.js"></script>
+</body>
+</html>
